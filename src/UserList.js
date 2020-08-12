@@ -8,24 +8,8 @@ function User({user}){
     )
 }
 
-function UserList(){
-    const users = [
-        {
-            id: 1,
-            username: 'goguard',
-            email:'whowho10@gmail.com'
-        },
-        {
-            id: 2,
-            username: 'go',
-            email:'tester@example.com'
-        },
-        {
-            id: 3,
-            username: 'lip',
-            email:'lip@example.com'
-        }
-    ];
+function UserList({users}){
+   
 
     return(
         <div>
@@ -34,7 +18,6 @@ function UserList(){
                     user => (<User user={user} key={user.id} />)  //key 값을 주는 이유는 각 원소들 마다 고유값을 줘서 리랜더링시 성능 최적화해준다.
                     ) //key로 사용할 고유값이 없을때는 index파라미터를 가져와서 사용한다. 하지만 index를 사용하면 성능에 도움이 되진 않는다. 
             }
-
         </div>
     )
 }

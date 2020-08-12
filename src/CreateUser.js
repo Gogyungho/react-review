@@ -16,6 +16,7 @@ function CreateUser ({ username, email, onChange, onCreate }){  //onChange는 in
                 value={email} 
              />
             <button onClick={onCreate}>등록</button>
+            
         </div>
     );
 }
